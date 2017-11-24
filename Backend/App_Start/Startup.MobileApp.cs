@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data.Entity;
 using System.Web.Http;
+using System.Web.Http.ExceptionHandling;
 using Microsoft.Azure.Mobile.Server;
 using Microsoft.Azure.Mobile.Server.Authentication;
 using Microsoft.Azure.Mobile.Server.Config;
 using Backend.DataObjects;
+using Backend.Logger;
 using Backend.Models;
 using Owin;
 
@@ -17,6 +19,12 @@ namespace Backend
         public static void ConfigureMobileApp(IAppBuilder app)
         {
             var config = new HttpConfiguration();
+            config.MapHttpAttributeRoutes();
+            config.EnableSystemDiagnosticsTracing();
+#if DEBUG
+            config.IncludeErrorDetailPolicy = IncludeErrorDetailPolicy.Always;
+#endif
+            config.Services.Add(typeof(IExceptionLogger), new TraceExceptionLogger());
             var mobileConfig = new MobileAppConfiguration();
 
             mobileConfig.AddTablesWithEntityFramework().ApplyTo(config);
