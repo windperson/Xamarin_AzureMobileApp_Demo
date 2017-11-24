@@ -45,11 +45,11 @@ namespace TodoList.ViewModels
 
         async Task ExecuteRefreshCommand()
         {
-            if (Isbusy)
+            if (IsBusy)
             {
                 return; ;
             }
-            Isbusy = true;
+            IsBusy = true;
 
             try
             {
@@ -67,7 +67,7 @@ namespace TodoList.ViewModels
             }
             finally
             {
-                Isbusy = false;
+                IsBusy = false;
             }
         }
 
@@ -78,11 +78,11 @@ namespace TodoList.ViewModels
 
         async Task ExecuteAddNewItemCommand()
         {
-            if (Isbusy)
+            if (IsBusy)
             {
                 return; ;
             }
-            Isbusy = true;
+            IsBusy = true;
 
             try
             {
@@ -94,7 +94,7 @@ namespace TodoList.ViewModels
             }
             finally
             {
-                Isbusy = false;
+                IsBusy = false;
             }
         }
 

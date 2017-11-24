@@ -31,11 +31,11 @@ namespace TodoList.ViewModels
 
         private async Task ExecuteSaveCommand()
         {
-            if (Isbusy)
+            if (IsBusy)
             {
                 return;
             }
-            Isbusy = true;
+            IsBusy = true;
 
             try
             {
@@ -56,7 +56,7 @@ namespace TodoList.ViewModels
             }
             finally
             {
-                Isbusy = false;
+                IsBusy = false;
             }
         }
 
@@ -65,11 +65,11 @@ namespace TodoList.ViewModels
 
         async Task ExecuteDeleteCommand()
         {
-            if (Isbusy)
+            if (IsBusy)
             {
                 return;
             }
-            Isbusy = true;
+            IsBusy = true;
 
             try
             {
@@ -86,7 +86,7 @@ namespace TodoList.ViewModels
             }
             finally
             {
-                Isbusy = false;
+                IsBusy = false;
             }
 
         }

@@ -22,7 +22,7 @@ namespace TodoList.Abstractions
 
         private bool _propIsBusy;
 
-        public bool Isbusy
+        public bool IsBusy
         {
             get => _propIsBusy;
             set => SetProperty(ref _propIsBusy, value, "IsBusy");

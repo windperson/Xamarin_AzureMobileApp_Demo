@@ -20,8 +20,8 @@ namespace TodoList.ViewModels
 
         private async Task ExecuteLoginCommand()
         {
-            if(Isbusy) { return;}
-            Isbusy = true;
+            if(IsBusy) { return;}
+            IsBusy = true;
 
             try
             {
@@ -33,7 +33,7 @@ namespace TodoList.ViewModels
             }
             finally
             {
-                Isbusy = false;
+                IsBusy = false;
             }
 
         }

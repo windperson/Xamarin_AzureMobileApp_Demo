@@ -18,7 +18,7 @@ namespace TodoList
 
             InitializeComponent();
 
-            MainPage = new TodoList.MainPage();
+            MainPage = new NavigationPage(new Pages.EntryPage());
         }
 
         protected override void OnStart()
