@@ -20,11 +20,11 @@ namespace Backend
         {
             var config = new HttpConfiguration();
             config.MapHttpAttributeRoutes();
+            config.Services.Add(typeof(IExceptionLogger), new TraceExceptionLogger());
             config.EnableSystemDiagnosticsTracing();
 #if DEBUG
             config.IncludeErrorDetailPolicy = IncludeErrorDetailPolicy.Always;
 #endif
-            config.Services.Add(typeof(IExceptionLogger), new TraceExceptionLogger());
             var mobileConfig = new MobileAppConfiguration();
 
             mobileConfig.AddTablesWithEntityFramework().ApplyTo(config);
