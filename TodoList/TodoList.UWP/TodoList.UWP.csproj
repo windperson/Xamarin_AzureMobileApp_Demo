@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{80064D90-E1A3-41FC-8E72-F00D22C15E01}</ProjectGuid>
+    <ProjectGuid>{B1252CB6-C558-4559-BF89-354827903C3B}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TodoList.UWP</RootNamespace>
@@ -89,10 +89,6 @@
     <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
   </PropertyGroup>
   <ItemGroup>
-    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
-    <None Include="project.json" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
@@ -152,8 +148,15 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Microsoft.Azure.Mobile.Client">
+      <Version>4.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms" Version="2.5.0.121934" />
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.0.4" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\TodoList\TodoList.csproj">
-      <Project>{f4621ce9-932b-487e-8b10-d142ccdf9071}</Project>
+      <Project>{36FB85F4-2282-4B89-A532-F8AFA04701CC}</Project>
       <Name>TodoList</Name>
     </ProjectReference>
   </ItemGroup>

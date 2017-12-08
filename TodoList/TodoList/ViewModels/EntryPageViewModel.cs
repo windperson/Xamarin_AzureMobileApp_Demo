@@ -16,11 +16,11 @@ namespace TodoList.ViewModels
         private Command _loginCmd;
 
         public Command LoginCommand =>
-            _loginCmd ?? (_loginCmd = new Command(async () => await ExecuteLoginCommand().ConfigureAwait(false)));
+            _loginCmd ?? (_loginCmd = new Command(ExecuteLoginCommand));
 
-        private async Task ExecuteLoginCommand()
+        private void ExecuteLoginCommand()
         {
-            if(IsBusy) { return;}
+            if (IsBusy) { return; }
             IsBusy = true;
 
             try
