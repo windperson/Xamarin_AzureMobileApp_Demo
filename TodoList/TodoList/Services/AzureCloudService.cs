@@ -13,7 +13,7 @@ namespace TodoList.Services
     public class AzureCloudService : ICloudService
     {
         private readonly MobileServiceClient _client;
-        private const string ServerUrl = @"https://windperson-mobileapp-demo.azurewebsites.net";
+        private const string ServerUrl = @"use your Azure Mobile App url";
 
         public AzureCloudService()
         {
