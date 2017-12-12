@@ -1,10 +1,11 @@
-﻿using System.Collections;
+﻿using System;
 using System.Collections.Generic;
+using System.Text;
 using System.Threading.Tasks;
 
-namespace TodoList.Abstractions
+namespace SharedInterface
 {
-    public interface ICloudTable<T> where T: TableData
+    public interface ITodoItemService<T> where T : ITodoItem
     {
         Task<T> CreateItemAsync(T item);
         Task<T> ReadItemAsync(string id);

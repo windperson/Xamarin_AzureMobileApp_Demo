@@ -2,7 +2,7 @@
 
 namespace Backend.DataObjects
 {
-    public class TodoItem : EntityData
+    public class TodoItem : EntityData, SharedInterface.ITodoItem
     {
         public string Text { get; set; }
 

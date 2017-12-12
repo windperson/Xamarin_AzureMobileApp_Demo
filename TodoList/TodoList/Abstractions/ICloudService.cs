@@ -2,6 +2,6 @@
 {
     public interface ICloudService
     {
-        ICloudTable<T> GetTable<T>() where T : TableData;
+        SharedInterface.ITodoItemService<T> GetTable<T>() where T : SyncableData, SharedInterface.ITodoItem;
     }
 }

@@ -2,7 +2,7 @@
 
 namespace TodoList.Models
 {
-    public class TodoItem : TableData
+    public class TodoItem : SyncableData, SharedInterface.ITodoItem
     {
         public string Text { get; set; }
         public bool Complete { get; set; }

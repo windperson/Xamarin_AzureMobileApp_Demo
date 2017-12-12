@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace TodoList.Abstractions
 {
-    public abstract class TableData
+    public abstract class SyncableData
     {
         public string Id { get; set; }
 

@@ -5,7 +5,7 @@ using TodoList.Abstractions;
 
 namespace TodoList.Services
 {
-    public class AzureCloudTable<T> : ICloudTable<T> where T : TableData
+    public class AzureCloudTable<T> : SharedInterface.ITodoItemService<T> where T : SyncableData, SharedInterface.ITodoItem
     {
         private MobileServiceClient _client;
         private IMobileServiceTable<T> _table;

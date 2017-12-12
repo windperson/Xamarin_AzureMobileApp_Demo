@@ -9,7 +9,7 @@ namespace TodoList.ViewModels
 {
     public class TaskDetailViewModel : BaseViewModel
     {
-        private ICloudTable<TodoItem> _table = App.CloudService.GetTable<TodoItem>();
+        private SharedInterface.ITodoItemService<TodoItem> _table = App.CloudService.GetTable<TodoItem>();
         public TodoItem Item { get; set; }
 
         public TaskDetailViewModel(TodoItem item = null)

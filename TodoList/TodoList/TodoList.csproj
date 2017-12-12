@@ -16,12 +16,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Abstractions\" />
     <Folder Include="Handler\" />
     <Folder Include="Models\" />
     <Folder Include="Properties\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\SharedInterface\SharedInterface.csproj" />
   </ItemGroup>
 
   <ItemGroup>
